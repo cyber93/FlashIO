@@ -29,11 +29,27 @@
 #include "blocAlloc.h"
 #include "genBench.h"
 #include "random.h"
+#include <iostream>
+#include <fstream>
+
+#ifdef _WIN32
+
+#include <string.h>
+#define strcasecmp stricmp
+#define strncasecmp strnicmp
+
+#else
+
+#include <strings.h>
+
+#endif
 
 #define DEVICE_TOO_SMALL 	1
 #define TEST_EXCEED_DEVICE 	2
 #define MAXBENCH 			10
 #define MAXMODE 			 6
+
+using namespace std;
 
 void GenExp(FILE*	fp, sParams* PB) {
 	
