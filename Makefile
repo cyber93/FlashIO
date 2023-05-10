@@ -2,7 +2,7 @@
 # 
 
 CC = gcc
-CFLAGS = -std=gnu++0x -g -w -O2
+CFLAGS = -std=gnu++0x -g -w -O2 -static-libgcc -static-libstdc++
 CXX = g++
 CXXFLAGS = $(CFLAGS)
 HDR = blocAlloc.h flashIO.h genBench.h input.h microbench.h output.h random.h rndFormat.h utility.h
